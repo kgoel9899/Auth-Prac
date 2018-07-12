@@ -38,6 +38,7 @@ app.use(function(req, res, next){
 // });
 //
 // var Campground = mongoose.model("Campground", schema);
+// moved --
 
 // Campground.create({
 //   name: "Camping",
