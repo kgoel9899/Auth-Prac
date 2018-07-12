@@ -1,2 +1,2 @@
 # Auth-Prac
-User Authentication
+Simple Authentication
