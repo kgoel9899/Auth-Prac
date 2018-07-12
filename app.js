@@ -5,10 +5,12 @@ var Campground = require("./models/campground");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var User = require("./models/user");
-
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 mongoose.connect("mongodb://test:test123@ds231961.mlab.com:31961/kshdb", { useNewUrlParser: true });
+
+//Use auth-routes
+
 
 //PASSPORT CONFIG
 
@@ -30,6 +32,7 @@ app.use(function(req, res, next){
   res.locals.currentUser = req.user;
   next();
 });
+
 
 // var schema = new mongoose.Schema({
 //   name: String,
