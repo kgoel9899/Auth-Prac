@@ -5,6 +5,7 @@ var Campground = require("./models/campground");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var User = require("./models/user");
+var PORT = process.env.PORT || 3000;
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 mongoose.connect("mongodb://test:test123@ds231961.mlab.com:31961/kshdb", { useNewUrlParser: true });
@@ -158,6 +159,6 @@ function isLoggedIn(req, res, next){
   res.redirect("/login");
 }
 
-app.listen(3000, function(){
+app.listen(PORT, function(){
   console.log("Server started");
 });
